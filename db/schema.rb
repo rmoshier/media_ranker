@@ -29,7 +29,7 @@ ActiveRecord::Schema.define(version: 20141029230626) do
     t.datetime "updated_at"
     t.text     "description"
     t.string   "author"
-    t.string   "name"
+    t.string   "name" 
   end
 
   create_table "movies", force: true do |t|
