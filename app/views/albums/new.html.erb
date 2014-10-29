@@ -2,18 +2,18 @@
 
 <%= form_for :album, url: albums_path do |f| %>
   <p>
-    <%= f.label :name %><br>
+    <%= f.label :title %><br>
     <%= f.text_field :title %>
   </p>
 
   <p>
     <%= f.label :artist %><br>
-    <%= f.text_field :title %>
+    <%= f.text_field :artist %>
   </p>
 
   <p>
     <%= f.label :description %><br>
-    <%= f.text_area :text %>
+    <%= f.text_field :description %>
   </p>
 
   <p>
