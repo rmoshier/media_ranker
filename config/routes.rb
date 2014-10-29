@@ -8,8 +8,10 @@ Rails.application.routes.draw do
   get '/books',         to: "books#index"
   get '/books/new',     to: "books#new"
 
-  get '/albums',        to: "albums#index"   
-  get '/albums/new',    to: "albums#new"
+  get '/albums',        to: "albums#index",    as: :albums
+  post '/albums',       to: "albums#create"
+  get '/albums/new',    to: "albums#new",      as: :new_album
+  get '/albums/:id',    to: "albums#show",   as: :album
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
