@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
 
   get 'home/index'
+  
   get '/movies',      to: "movies#index"
 
   get '/books',       to: "books#index"
