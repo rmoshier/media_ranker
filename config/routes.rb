@@ -2,14 +2,14 @@ Rails.application.routes.draw do
 
   get 'home/index'
 
-  get '/movies',      to: "movies#index"
-  get '/movies/new',  to: "movies#new"
+  get '/movies',        to: "movies#index"
+  get '/movies/new',    to: "movies#new"
 
-  get '/books',       to: "books#index"
-  get '/books/new',   to: "books#new"
+  get '/books',         to: "books#index"
+  get '/books/new',     to: "books#new"
 
-  get '/albums',      to: "albums#index"
-  get '/albums/new',  to: "albums#new"
+  get '/albums',        to: "albums#index"   
+  get '/albums/new',    to: "albums#new"
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
