@@ -5,8 +5,10 @@ Rails.application.routes.draw do
   get '/movies',        to: "movies#index"
   get '/movies/new',    to: "movies#new"
 
-  get '/books',         to: "books#index"
-  get '/books/new',     to: "books#new"
+  get '/books',         to: "books#index",    as: :books
+  post '/books',        to: "books#create"
+  get '/books/new',     to: "books#new",      as: :new_books
+  get '/books/:id',     to: "books#show",     as: :book
 
   get '/albums',        to: "albums#index",    as: :albums
   post '/albums',       to: "albums#create"
