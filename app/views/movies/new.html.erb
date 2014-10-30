@@ -1,1 +1,22 @@
 <h1>Movies#New</h1>
+
+<%= form_for :movie, url: movies_path do |f| %>
+  <p>
+    <%= f.label :name %><br>
+    <%= f.text_field :name %>
+  </p>
+
+  <p>
+    <%= f.label :director %><br>
+    <%= f.text_field :director %>
+  </p>
+
+  <p>
+    <%= f.label :description %><br>
+    <%= f.text_field :description %>
+  </p>
+
+  <p>
+    <%= f.submit %>
+  </p>
+<% end %>

@@ -2,13 +2,15 @@ Rails.application.routes.draw do
 
   get 'home/index'
 
-  get '/movies',        to: "movies#index"
-  get '/movies/new',    to: "movies#new"
+  get '/movies',        to: "movies#index",    as: :movies
+  post '/movies',       to: "movies#create"
+  get '/movies/new',    to: "movies#new",      as: :new_movies
+  get '/movies/:id',    to: "movies#show",     as: :movie
 
-  get '/books',         to: "books#index",    as: :books
+  get '/books',         to: "books#index",     as: :books
   post '/books',        to: "books#create"
-  get '/books/new',     to: "books#new",      as: :new_books
-  get '/books/:id',     to: "books#show",     as: :book
+  get '/books/new',     to: "books#new",       as: :new_books
+  get '/books/:id',     to: "books#show",      as: :book
 
   get '/albums',        to: "albums#index",    as: :albums
   post '/albums',       to: "albums#create"
