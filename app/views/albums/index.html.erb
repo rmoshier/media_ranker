@@ -1,1 +1,17 @@
-<h1>Albums#Index</h1>
+<h1>All Albums</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Artist</th>
+    <th>Description</th>
+  </tr>
+
+  <% @albums.each do |album| %>
+    <tr>
+      <td><%= album.name %></td>
+      <td><%= album.artist %></td>
+      <td><%= album.description %></td>
+    </tr>
+  <% end %>
+</table>
