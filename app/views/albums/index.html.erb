@@ -12,6 +12,8 @@
       <td><%= album.name %></td>
       <td><%= album.artist %></td>
       <td><%= album.description %></td>
+      <td><%= link_to 'Show', album_path(album) %></td>
+      <td><%= link_to 'Edit', edit_album_path(album) %></td>
     </tr>
   <% end %>
 </table>

@@ -2,20 +2,21 @@ Rails.application.routes.draw do
 
   get 'home/index'
 
-  get '/movies',        to: "movies#index",    as: :movies
-  post '/movies',       to: "movies#create"
-  get '/movies/new',    to: "movies#new",      as: :new_movies
-  get '/movies/:id',    to: "movies#show",     as: :movie
+  get '/movies',          to: "movies#index",    as: :movies
+  post '/movies',         to: "movies#create"
+  get '/movies/new',      to: "movies#new",      as: :new_movies
+  get '/movies/:id',      to: "movies#show",     as: :movie
 
-  get '/books',         to: "books#index",     as: :books
-  post '/books',        to: "books#create"
-  get '/books/new',     to: "books#new",       as: :new_books
-  get '/books/:id',     to: "books#show",      as: :book
+  get '/books',           to: "books#index",     as: :books
+  post '/books',          to: "books#create"
+  get '/books/new',       to: "books#new",       as: :new_books
+  get '/books/:id',       to: "books#show",      as: :book
 
-  get '/albums',        to: "albums#index",    as: :albums
-  post '/albums',       to: "albums#create"
-  get '/albums/new',    to: "albums#new",      as: :new_albums
-  get '/albums/:id',    to: "albums#show",     as: :album
+  get '/albums',          to: "albums#index",    as: :albums
+  post '/albums',         to: "albums#create"
+  get '/albums/new',      to: "albums#new",      as: :new_albums
+  get '/albums/:id/edit', to: "albums#edit",     as: :edit_album
+  get '/albums/:id',      to: "albums#show",     as: :album
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
