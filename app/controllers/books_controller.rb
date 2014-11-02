@@ -11,11 +11,21 @@ class BooksController < ApplicationController
     redirect_to @book
   end
 
+  def edit
+    @book = Book.find(params[:id])
+  end
+
   def new
   end
 
   def show
     @book = Book.find(params[:id])
+  end
+
+  def update
+    @book = Book.find(params[:id])
+    @book.update(book_params)
+    render 'show'
   end
 
   private
